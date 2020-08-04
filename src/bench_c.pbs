@@ -1,0 +1,21 @@
+#!/bin/bash --login
+#
+#PBS -l select=1:ncpus=36
+#PBS -l place=excl
+#PBS -N MD_MODIFIED
+#PBS -A d171-s1667002
+#PBS -l walltime=0:14:0
+
+
+
+# Switch to current working directory
+cd $PBS_O_WORKDIR
+
+module load intel-compilers-18
+
+# Run 
+#./MD >> output_B159973
+
+# Else run for 5 times 
+chmod 777 run.sh; ./run.sh
+
